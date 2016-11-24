@@ -1,0 +1,14 @@
+
+<div ng-hide="isLoggedIn" class="home-content">
+	<h1>Welcome to MySong!</h1>
+	<h2>Putting you in control of the music at events everywhere!</h2>
+	<h3>Please click login to get started!</h3>
+	<button type="button" class="btn btn-primary" href="/login">Login</button>
+	<h3>If you're a DJ, please continue to the<h3>
+	<button type="button" class="btn btn-warning">DJ Dashboard</button>
+</div>
+<div ng-show="isLoggedIn">
+
+	<p>{{welcomeMessage}}</p>
+
+</div>
