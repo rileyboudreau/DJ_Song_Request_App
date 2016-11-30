@@ -1,7 +1,7 @@
 <div class="list-group" ng-show="requestsList.length">	
 	<div class="list-group-item clearfix" ng-repeat="request in requestsList">
 		<p>
-			<b> Song: </b> {{request.song}} <b> By: </b> {{request.artist}} <button type="button" class="btn btn-danger" ng-click="removerequest(request.$id)">Remove</button>
+			<b> Song: </b> {{request.song}} <b> By: </b> {{request.artist}} <input type="checkbox" ng-click="removeRequest(request.$id)">&nbsp;&nbsp;
 		</p>
 	</div>
 </div>

@@ -17,7 +17,7 @@ angular.module('dj_song_request').factory('request', function($firebaseArray, $f
 			return $firebaseObject(individualrequestRef);
 		},
 
-		removerequest: function(request_id) {
+		removeRequest: function(request_id) {
 			var individualRequestRef = requestRef.child(request_id);
 			var therequest = $firebaseObject(individualrequestRef);
 			return therequest.$remove();

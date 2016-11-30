@@ -36,6 +36,10 @@ angular.module('dj_song_request').controller('MainController', function($scope, 
 		}
 	};
 
+	$scope.removeRequest = function(request_id) {
+		request.removeRequest(request_id);
+	};
+
 	$scope.showUpdaterequest = function(request_id) {
 		$scope.updaterequest = request.getrequest(request_id);
 		$("#updateModal").modal('show');
