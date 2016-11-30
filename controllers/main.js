@@ -1,4 +1,4 @@
-angular.module('livecode').controller('MainController', function($scope, Auth, AuthWaitForLogged, Student) {
+angular.module('dj_song_request').controller('MainController', function($scope, Auth, AuthWaitForLogged, request) {
 	
 	if (AuthWaitForLogged == null) {
 
@@ -17,31 +17,31 @@ angular.module('livecode').controller('MainController', function($scope, Auth, A
 	console.log('isLoggedIn');
 	console.log($scope.isLoggedIn);
 
-	$scope.studentsList = Student.getStudents();
+	$scope.requestsList = request.getrequests();
 
 	$scope.checkSpencer = function() {
-		$scope.currentStudent = Student.checkSpencer();
+		$scope.currentrequest = request.checkSpencer();
 	};
 
-	$scope.addStudent = function() {
+	$scope.addrequest = function() {
 
-		if ($scope.newStudent === undefined || $scope.newStudent.name == "" || $scope.newStudent.class == "" || $scope.newStudent.question == "") {
+		if ($scope.newrequest === undefined || $scope.newrequest.name == "" || $scope.newrequest.class == "" || $scope.newrequest.question == "") {
 			alert("Please enter all required information");
 		}
 		else {
-			Student.addNewStudent($scope.newStudent).then(function() {
+			request.addNewrequest($scope.newrequest).then(function() {
 				console.log("Added!");
 			});
 		}
 	};
 
-	$scope.showUpdateStudent = function(student_id) {
-		$scope.updateStudent = Student.getStudent(student_id);
+	$scope.showUpdaterequest = function(request_id) {
+		$scope.updaterequest = request.getrequest(request_id);
 		$("#updateModal").modal('show');
 	};
 
-	$scope.updateTheStudent = function(theStudent) {
-		Student.saveStudent(theStudent).then(function() {
+	$scope.updateTherequest = function(therequest) {
+		request.saverequest(therequest).then(function() {
 			alert("All good!");
 		});
 	};

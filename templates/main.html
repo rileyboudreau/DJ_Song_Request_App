@@ -2,13 +2,20 @@
 <div ng-hide="isLoggedIn" class="home-content">
 	<h1>Welcome to MySong!</h1>
 	<h2>Putting you in control of the music at events everywhere!</h2>
-	<h3>Please click login to get started!</h3>
-	<button type="button" class="btn btn-primary" href="/login">Login</button>
-	<h3>If you're a DJ, please continue to the<h3>
-	<button type="button" class="btn btn-warning">DJ Dashboard</button>
+	<h3>Please login to get started!</h3>
 </div>
 <div ng-show="isLoggedIn">
 
-	<p>{{welcomeMessage}}</p>
+	<div class="form-group col-sm-5">
+  		<label for="usr">Song:</label>
+  		<input type="text" class="form-control" id="song">
+	</div>
+
+	<div class="form-group col-sm-5">
+  		<label for="usr">Artist:</label>
+  		<input type="text" class="form-control" id="artist">
+	</div>
+
+	<button type="button" class="btn btn-success col-sm-2">Submit</button>
 
 </div>

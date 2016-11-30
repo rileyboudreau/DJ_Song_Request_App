@@ -1,4 +1,4 @@
-angular.module('livecode').controller('LoginController', function($scope, Auth, AuthLogged) {
+angular.module('dj_song_request').controller('LoginController', function($scope, Auth, AuthLogged) {
 
 	$scope.isLoggedIn = AuthLogged;
 

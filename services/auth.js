@@ -1,4 +1,4 @@
-angular.module('livecode').factory('Auth', function($firebaseAuth, $firebaseObject) {
+angular.module('dj_song_request').factory('Auth', function($firebaseAuth, $firebaseObject) {
 
 	var auth = $firebaseAuth();
 	var loggedIn = false;
