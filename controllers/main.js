@@ -19,11 +19,16 @@ angular.module('dj_song_request').controller('MainController', function($scope, 
 
 	$scope.requestsList = request.getrequests();
 
+	$scope.songRequest = {
+        song: '',
+        artist: ''
+    };
+
 	$scope.checkSpencer = function() {
 		$scope.currentrequest = request.checkSpencer();
 	};
 
-	$scope.songRequest = function() {
+	$scope.addSongRequest = function() {
 
 		if ($scope.songRequest.song == "" || $scope.songRequest.artist == "") {
 			alert("Please enter all required information");
