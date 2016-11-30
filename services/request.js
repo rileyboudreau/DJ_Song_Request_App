@@ -20,16 +20,6 @@ angular.module('dj_song_request').factory('request', function($firebaseArray, $f
 		saverequest: function(therequest) {
 			return therequest.$save();
 		},
-
-		checkSpencer: function() {
-			var spencerRef = requestRef.child('-KX76sTC5sPdonN1PoPO');
-			var spencer = $firebaseObject(spencerRef);
-			return spencer.$loaded().then(function(data) {
-				console.log("This is Spencer's name: "+spencer.name);
-				console.log(spencer);
-			 	return data;
-			});
-		},
 	};
 
 	request.requests = $firebaseArray(requestRef);
