@@ -23,13 +23,13 @@ angular.module('dj_song_request').controller('MainController', function($scope, 
 		$scope.currentrequest = request.checkSpencer();
 	};
 
-	$scope.addrequest = function() {
+	$scope.songRequest = function() {
 
-		if ($scope.newrequest === undefined || $scope.newrequest.name == "" || $scope.newrequest.class == "" || $scope.newrequest.question == "") {
+		if ($scope.songRequest.song == "" || $scope.songRequest.artist == "") {
 			alert("Please enter all required information");
 		}
 		else {
-			request.addNewrequest($scope.newrequest).then(function() {
+			request.addSongRequest($scope.songRequest).then(function() {
 				console.log("Added!");
 			});
 		}

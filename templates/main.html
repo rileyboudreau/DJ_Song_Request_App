@@ -6,16 +6,16 @@
 </div>
 <div ng-show="isLoggedIn">
 
-	<div class="form-group col-sm-5">
+	<div class="form-group col-sm-5" ng-model="songRequest.song">
   		<label for="usr">Song:</label>
   		<input type="text" class="form-control" id="song">
 	</div>
 
-	<div class="form-group col-sm-5">
+	<div class="form-group col-sm-5" ng-model="songRequest.artist">
   		<label for="usr">Artist:</label>
   		<input type="text" class="form-control" id="artist">
 	</div>
 
-	<button type="button" class="btn btn-success col-sm-2">Submit</button>
+	<button type="button" class="btn btn-success col-sm-2" ng-click="songRequest()">Submit</button>
 
 </div>

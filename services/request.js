@@ -4,8 +4,8 @@ angular.module('dj_song_request').factory('request', function($firebaseArray, $f
 	var request = {
 		requests: [],
 
-		addNewrequest: function(newrequest) {
-			return request.requests.$add(newrequest);
+		addSongRequest: function(songRequest) {
+			return request.requests.$add(songRequest);
 		},
 
 		getrequests: function() {
