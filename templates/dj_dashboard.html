@@ -1,1 +1,7 @@
-<h3>Song requests will appear here!</h3>
+<div class="list-group" ng-show="getrequests.length">	
+	<div class="list-group-item clearfix" ng-repeat="request in requests">
+		<p>
+			<strong>{{request.name}} - </strong>{{request.artist}}
+		</p>
+	</div>
+</div>
