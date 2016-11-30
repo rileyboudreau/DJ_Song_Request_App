@@ -36,7 +36,7 @@ angular.module('dj_song_request').controller('MainController', function($scope, 
 		}
 	};
 
-	$scope.removeRequest = function(request_id) {
+	$scope.removeSongRequest = function(_id) {
 		request.removeRequest(request_id);
 	};
 

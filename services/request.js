@@ -1,4 +1,5 @@
 angular.module('dj_song_request').factory('request', function($firebaseArray, $firebaseObject) {
+
 	var requestRef = firebase.database().ref().child("requests");
 
 	var request = {
@@ -17,14 +18,14 @@ angular.module('dj_song_request').factory('request', function($firebaseArray, $f
 			return $firebaseObject(individualrequestRef);
 		},
 
-		removeRequest: function(request_id) {
-			var individualRequestRef = requestRef.child(request_id);
-			var therequest = $firebaseObject(individualrequestRef);
-			return therequest.$remove();
-		},
-
 		saverequest: function(therequest) {
 			return therequest.$save();
+		},
+
+		removerequest: function(request_id) {
+			var individualTodoRef = requestRef.child(request_id);
+			var therequest = $firebaseObject(individualrequestRef);
+			return therequest.$remove();
 		},
 	};
 
