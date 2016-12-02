@@ -23,8 +23,8 @@ angular.module('dj_song_request').factory('request', function($firebaseArray, $f
 		},
 
 		removerequest: function(request_id) {
-			var individualTodoRef = requestRef.child(request_id);
-			var therequest = $firebaseObject(individualrequestRef);
+			var individualRequestRef = requestRef.child(request_id);
+			var therequest = $firebaseObject(individualRequestRef);
 			return therequest.$remove();
 		},
 	};

@@ -20,6 +20,11 @@ angular.module('dj_song_request').factory('Auth', function($firebaseAuth, $fireb
 			return auth.$signInWithPopup("google");
 		},
 
+		loginWithFacebook: function() {
+			return auth.$signInWithPopup("facebook");
+		},
+
+
 		isLoggedIn: function() {
 			return Auth.user != {};
 		},
